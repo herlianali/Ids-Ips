@@ -1,0 +1,167 @@
+[
+    {
+        "id": 1,
+        "skrip": "select drop ",
+        "jenis": "sql-injection",
+        "ip_address": "::1",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Berbahaya",
+        "status": "Blocked",
+        "jam": "14:38:21",
+        "tanggal": "2020-06-06"
+    },
+    {
+        "id": 2,
+        "skrip": "select drop ",
+        "jenis": "sql-injection",
+        "ip_address": "::1",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Berbahaya",
+        "status": "Blocked",
+        "jam": "14:38:22",
+        "tanggal": "2020-06-06"
+    },
+    {
+        "id": 3,
+        "skrip": "select * from user ",
+        "jenis": "sql-injection",
+        "ip_address": "::1",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Ringan",
+        "status": null,
+        "jam": "00:02:43",
+        "tanggal": "2020-06-14"
+    },
+    {
+        "id": 4,
+        "skrip": "select * from user ",
+        "jenis": "sql-injection",
+        "ip_address": "::1",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Ringan",
+        "status": null,
+        "jam": "00:04:20",
+        "tanggal": "2020-06-14"
+    },
+    {
+        "id": 5,
+        "skrip": "select * from user ",
+        "jenis": "sql-injection",
+        "ip_address": "::1",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Ringan",
+        "status": null,
+        "jam": "00:04:57",
+        "tanggal": "2020-06-14"
+    },
+    {
+        "id": 6,
+        "skrip": "select * from user ",
+        "jenis": "sql-injection",
+        "ip_address": "::1",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Ringan",
+        "status": null,
+        "jam": "00:05:05",
+        "tanggal": "2020-06-14"
+    },
+    {
+        "id": 7,
+        "skrip": "select * from user ",
+        "jenis": "sql-injection",
+        "ip_address": "::1",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Ringan",
+        "status": null,
+        "jam": "00:05:27",
+        "tanggal": "2020-06-14"
+    },
+    {
+        "id": 8,
+        "skrip": "select * from user ",
+        "jenis": "sql-injection",
+        "ip_address": "::1",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Ringan",
+        "status": null,
+        "jam": "00:05:38",
+        "tanggal": "2020-06-14"
+    },
+    {
+        "id": 9,
+        "skrip": "select * from user ",
+        "jenis": "sql-injection",
+        "ip_address": "::1",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Ringan",
+        "status": null,
+        "jam": "00:05:45",
+        "tanggal": "2020-06-14"
+    },
+    {
+        "id": 10,
+        "skrip": "select * from user ",
+        "jenis": "sql-injection",
+        "ip_address": "::1",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Ringan",
+        "status": null,
+        "jam": "00:08:00",
+        "tanggal": "2020-06-14"
+    },
+    {
+        "id": 11,
+        "skrip": "select * from user ",
+        "jenis": "sql-injection",
+        "ip_address": "::1",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Ringan",
+        "status": "Online",
+        "jam": "00:08:33",
+        "tanggal": "2020-06-14"
+    },
+    {
+        "id": 12,
+        "skrip": "select drop ' 1 = 1 OR -- ",
+        "jenis": "sql-injection",
+        "ip_address": "::1",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Berbahaya",
+        "status": "Blocked",
+        "jam": "11:16:20",
+        "tanggal": "2020-06-17"
+    },
+    {
+        "id": 13,
+        "skrip": "select drop ' 1 = 1 OR -- ",
+        "jenis": "sql-injection",
+        "ip_address": "::1",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Berbahaya",
+        "status": "Blocked",
+        "jam": "11:16:20",
+        "tanggal": "2020-06-17"
+    },
+    {
+        "id": 14,
+        "skrip": "select drop ",
+        "jenis": "sql-injection",
+        "ip_address": "192.168.106.149",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Berbahaya",
+        "status": "Blocked",
+        "jam": "16:46:31",
+        "tanggal": "2020-06-20"
+    },
+    {
+        "id": 15,
+        "skrip": "select drop ",
+        "jenis": "sql-injection",
+        "ip_address": "192.168.106.149",
+        "browser": "Mozilla\/5.0 (X11; Linux x86_64; rv:75.0) Gecko\/20100101 Firefox\/75.0",
+        "kategory": "Berbahaya",
+        "status": "Blocked",
+        "jam": "16:46:31",
+        "tanggal": "2020-06-20"
+    }
+]
