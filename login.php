@@ -6,7 +6,6 @@
   require_once(realpath(dirname(__FILE__))."/controller/loginController.php");
   require_once(realpath(dirname(__FILE__))."/lib/monitor.php");
 
-  
   $login = new loginController;
 
   $username = Ids($_POST['username']);
@@ -27,7 +26,7 @@
     <div class="row">
       <div class="col m3"></div>
       <div class="col m6">
-         <h2 class="header center-align">If You User Please Login</h2>
+         <h2 class="header center-align">Are You User in My Web</h2>
          <div class="card horizontal hoverable">
            <div class="card-image">
              <br><br><br>
@@ -36,7 +35,7 @@
            </div>
            <div class="card-stacked">
              <div class="card-content">
-               <br>
+                <h5 class="center-align">please login first</h5>
                <form class="" action="" method="post">
                  <div class="row">
                    <div class="input-field col s10">
@@ -48,7 +47,7 @@
                      <label for="password">Password</label>
                    </div>
                    <div class="input-field col s10">
-                     <button class="btn waves-effect waves-light grey darken-3" type="submit" name="action">Submit
+                     <button class="btn waves-effect waves-light grey darken-3" type="submit" name="action">Login
                        <i class="material-icons right">send</i>
                      </button>
                    </div>

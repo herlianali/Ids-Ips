@@ -53,7 +53,7 @@
 
     <script type="text/javascript" src="../style/materialize/js/materialize.min.js"></script>
     <script type="text/javascript">
-      M.toast({html: 'I am a toast!'})
+      // M.toast({html: 'I am a toast!'})
     </script>
   </body>
 </html>

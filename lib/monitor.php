@@ -21,6 +21,38 @@
 
 	}
 
+	function browser()
+	{
+		$browser = strtolower($_SERVER['HTTP_USER_AGENT']);
+		if (strpos($browser, 'firefox')) {
+			if (strpos($browser, 'mobile')) {
+				return 'Firefox mobile divice';
+			}else{
+				return 'Firefox personal computer';
+			}
+		}elseif (strpos($browser, 'chrome')) {
+			if (strpos($browser, 'mobile')) {
+				return 'Chrome mobile divice';
+			}else{
+				return 'Chrome personal computer';
+			}
+		}elseif (strpos($browser, 'opera') || strpos($browser, 'opr/')) {
+			if (strpos($browser, 'mobile')) {
+				return 'Opera mobile divice';
+			}else{
+				return 'Opera personal computer';
+			}
+		}elseif (strpos($browser, 'edge')) {
+			if (strpos($browser, 'mobile')) {
+				return 'Edge mobile divice';
+			}else{
+				return 'Edge personal computer';
+			}
+		}elseif (strpos($browser, 'msie') || strpos($browser, 'trident/7')) {
+			return 'Internet Explore';
+		}
+	}
+
 	function Ids($value)
 	{
 		// echo $value;
@@ -34,7 +66,9 @@
 		
 		if (!empty($value)) {
 
-			if (preg_match('/select/', $value)) {
+			if (preg_match('/<html>/', $value)) {
+
+				$lokasi = basename($_SERVER['SCRIPT_NAME']);
 
 				$file 	  = file_get_contents($urlJson);
 				$arr_data = json_decode($file, true);
@@ -49,10 +83,11 @@
 				$last_data_id = $last_data['id'];
 				$arr_data [] = array(
 					'id'		 => ++$last_data_id,
+					'lokasi'	 => $lokasi,
 					'skrip'		 => $injection,
 					'jenis' 	 => $jenis,
 					'ip_address' => $_SERVER['REMOTE_ADDR'],
-					'browser' 	 => 'Mozilla/5.0 (X11; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0',
+					'browser' 	 => browser(),
 					'kategory' 	 => $cek_ips[1],
 					'status' 	 => $cek_ips[0],
 					'jam' 		 => date('H:i:s'),

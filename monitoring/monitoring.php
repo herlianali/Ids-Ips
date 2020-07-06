@@ -39,16 +39,27 @@
 	        </tbody>
 	      </table>
         </div>
-    		  <ul class="pagination">
-    		    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-    		    <li class="active"><a href="#!">1</a></li>
-    		    <li class="waves-effect"><a href="#!">2</a></li>
-    		    <li class="waves-effect"><a href="#!">3</a></li>
-    		    <li class="waves-effect"><a href="#!">4</a></li>
-    		    <li class="waves-effect"><a href="#!">5</a></li>
-    		    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-    		  </ul>
+        <div class="row" style="margin-left: 30px;">
+          <div class="left-align">
+      		  <ul class="pagination">
+      		    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+      		    <li class="active"><a href="#!">1</a></li>
+      		    <li class="waves-effect"><a href="#!">2</a></li>
+      		    <li class="waves-effect"><a href="#!">3</a></li>
+      		    <li class="waves-effect"><a href="#!">4</a></li>
+      		    <li class="waves-effect"><a href="#!">5</a></li>
+      		    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      		  </ul>
+          </div>
+          <div class="right">
+            <select>
+              <option>a</option>
+              <option>b</option>
+            </select>
+          </div>
+          <!-- 
         <div class="card-action">
+        </div> -->
         </div>
       </div>
     </div>
@@ -66,7 +77,7 @@ foreach ($data as $key => $value) {
     <div class="modal-content">
       <h4>Detail Serangan</h4>
       <p>
-      	Halaman Yang Di Serang Adalah : <b>Login.php</b><br>
+      	Halaman Yang Di Serang Adalah : <b><?= $value->lokasi; ?></b><br>
       	Script yang digunakana : <br><b><?= $value->skrip; ?></b><br>
       	Kategori Serangan : <b><?php echo $value->kategory; ?></b><br>
       	Status User : 
@@ -80,7 +91,7 @@ foreach ($data as $key => $value) {
       </p>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Tutup</a>
+      <a href="#!" class="modal-close waves-effect waves-danger btn">Tutup</a>
     </div>
   </div>
 <?php } ?>

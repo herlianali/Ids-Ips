@@ -1,8 +1,16 @@
 </main>
 <script type="text/javascript" src="../style/materialize/js/materialize.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="../style/DataTables/jQuery-3.3.1/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../style/DataTables/datatables.js"></script>
 
 <script type="text/javascript">
+    $(document).ready( function () {
+      $('#table_id').DataTable();
+    } );
+</script>
+
+<script type="text/javascript">
+
   const SideNav = document.querySelectorAll('.sidenav');
   M.Sidenav.init(SideNav);
 

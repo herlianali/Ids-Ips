@@ -4,18 +4,9 @@
     <meta charset="utf-8">
     <title>.::Monitoring Web::.</title>
     <link rel="stylesheet" href="../style/materialize/css/materialize.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.css"/>
-    <link href="../style/materialize/icon.css" rel="stylesheet">
-   <!--  <style media="screen">
-      header, main, footer {
-        padding-left: 300px;
-      }
-      @media only screen and (max-width : 992px) {
-      	header, main, footer {
-      		padding-left: 0;
-      	}
-      }
-    </style> -->
+    <link rel="stylesheet" href="../style/materialize/icon.css">
+    <link rel="stylesheet" type="text/css" href="../style/DataTables/datatables.css"/>
+
   </head>
   <body class="grey darken-1">
     <header>
