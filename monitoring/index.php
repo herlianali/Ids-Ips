@@ -1,15 +1,10 @@
 <?php 
 
-  if ($_GET['alert'] == "password") {
-    echo "";
-  }elseif ($_GET['alert'] == "username") {
-    echo "";
-  }
-
-  require_once("../controller/loginController.php");
+  require "../controller/loginController.php";
+  require "../lib/monitor.php";
 
   $login = new loginController;
-  $login->loginAdmin($_POST['username'], $_POST['password']);
+  $login->loginAdmin(Ids($_POST['username']), Ids($_POST['password']));
 
 ?>
 

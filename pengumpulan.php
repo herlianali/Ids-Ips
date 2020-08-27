@@ -1,48 +1,57 @@
-<?php include "./templates/header.php" ?>
+<?php 
+include "./templates/header.php";
+include "controller/pengumpulanController.php";
+
+$nama      = Ids($_POST["nama"]);
+$nim       = Ids($_POST["nim"]);
+$kelas 	   = Ids($_POST["kelas"]);
+$praktikum = Ids($_POST["praktikum"]);
+$tanggal   = date("Y-m-d");
+$file      = "laporan.pdf";
+
+
+$pengumpulan = new pengumpulan;
+$pengumpulan->tambahData($nama, $nim, $kelas, $praktikum, $tanggal, $file);
+
+?>
 
 <div class="container">
   <h2>Pengumpulan Praktikum</h2>
   <div class="card-panel">
     <div class="container">
-      <form class="" action="index.html" method="post">
+      <form class="" action="" method="post">
         <div class="row">
           <div class="col s12">
             <div class="row">
               <div class="input-field">
-                <input id="Nama" type="text" class="validate">
+                <input id="Nama" type="text" class="validate" name="nama">
                 <label for="Nama">Nama</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field">
-                <input id="Nim" type="text" class="validate">
+                <input id="Nim" type="text" class="validate" name="nim">
                 <label for="Nim">Nim</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field">
-                <input id="Kelas" type="text" class="validate">
+                <input id="Kelas" type="text" class="validate" name="kelas">
                 <label for="Kelas">Kelas</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field">
-                <input id="Praktikum" type="text" class="validate">
-                <label for="Praktikum">Praktikum</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field">
-                <select>
+                <select name="praktikum">
                   <option value="" disabled selected>Pilih Praktikum</option>
-                  <option value="1">Algoritma Pemrogaman</option>
-                  <option value="2">Algoritma Struktur Data</option>
-                  <option value="3">Pemrograman Berbasis Object</option>
-                  <option value="4">Basis Data</option>
-                  <option value="5">Sistem Operasi</option>
-                  <option value="6">Jaringan Komputer</option>
-                  <option value="7">Rekayasa Perangkat Lunak</option>
-                  <option value="8">Sistem Digital</option>
+                  <option value="Algoritma Pemrogaman">Algoritma Pemrogaman</option>
+                  <option value="Algoritma Struktur Data">Algoritma Struktur Data</option>
+                  <option value="Pemrograman Berbasis Object">Pemrograman Berbasis Object</option>
+                  <option value="Basis Data">Basis Data</option>
+                  <option value="Sistem Operasi">Sistem Operasi</option>
+                  <option value="Jaringan Komputer">Jaringan Komputer</option>
+                  <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                  <option value="Sistem Digital">Sistem Digital</option>
                 </select>
                 <label>Praktikum</label>
               </div>

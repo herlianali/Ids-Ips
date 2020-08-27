@@ -1,11 +1,12 @@
 <?php include "templates/header.php" ?>
 
   <div class="row">
-    <div class="col s12 m12">
-      <div class="card">
+      <div class="col m1"></div>
+
+      <div class="card col m10">
         <div class="card-content">
           <span class="card-title">IDS & IPS Attack List</span>
-          <table class="responsive-table">
+          <table class="responsive-table" id="table_id">
 	        <thead>
 	          <tr>
 	              <th>Ip Address</th>
@@ -23,7 +24,7 @@
 
               $file = file_get_contents("../lib/data.json");
               $data = json_decode($file);
-
+              arsort($data);
               foreach ($data as $key => $value) {
             ?>
 	          <tr>
@@ -39,30 +40,9 @@
 	        </tbody>
 	      </table>
         </div>
-        <div class="row" style="margin-left: 30px;">
-          <div class="left-align">
-      		  <ul class="pagination">
-      		    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-      		    <li class="active"><a href="#!">1</a></li>
-      		    <li class="waves-effect"><a href="#!">2</a></li>
-      		    <li class="waves-effect"><a href="#!">3</a></li>
-      		    <li class="waves-effect"><a href="#!">4</a></li>
-      		    <li class="waves-effect"><a href="#!">5</a></li>
-      		    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-      		  </ul>
-          </div>
-          <div class="right">
-            <select>
-              <option>a</option>
-              <option>b</option>
-            </select>
-          </div>
-          <!-- 
-        <div class="card-action">
-        </div> -->
-        </div>
       </div>
-    </div>
+      
+      <div class="col m1"></div>
   </div>
 
 <?php 
@@ -78,7 +58,7 @@ foreach ($data as $key => $value) {
       <h4>Detail Serangan</h4>
       <p>
       	Halaman Yang Di Serang Adalah : <b><?= $value->lokasi; ?></b><br>
-      	Script yang digunakana : <br><b><?= $value->skrip; ?></b><br>
+      	Script yang digunakana : <br><b><?= htmlspecialchars($value->skript); ?></b><br>
       	Kategori Serangan : <b><?php echo $value->kategory; ?></b><br>
       	Status User : 
         <?php 

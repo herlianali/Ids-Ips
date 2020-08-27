@@ -24,8 +24,35 @@
         <tbody style="">
           <tr>
             <td>1</td>
+            <td>Jaringan Komputer</td>
+            <td>Arif Senja Fitrani, M.Kom</td>
+            <td>Herlian Aliyasa Almaj Duddin</td>
+            <td>14/2/2020</td>
+            <td>20.30 WIB</td>
+            <td>Terkumpul</td>
+          </tr>
+          <tr>
+            <td>2</td>
             <td>Algoritma Pemrogaman</td>
             <td>Mochamad Alfan Rosid, S.Kom., M.Kom</td>
+            <td>Herlian Aliyasa Almaj Duddin</td>
+            <td>14/2/2020</td>
+            <td>20.30 WIB</td>
+            <td>Terkumpul</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Basis Data</td>
+            <td>Ika Ratna Indra Astutik, S.Kom., MT</td>
+            <td>Herlian Aliyasa Almaj Duddin</td>
+            <td>14/2/2020</td>
+            <td>20.30 WIB</td>
+            <td>Terkumpul</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Sistem Operasi</td>
+            <td>Mohammad Suryawinata, S.Pd., M.Kom</td>
             <td>Herlian Aliyasa Almaj Duddin</td>
             <td>14/2/2020</td>
             <td>20.30 WIB</td>

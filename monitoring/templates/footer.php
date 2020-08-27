@@ -5,8 +5,11 @@
 
 <script type="text/javascript">
     $(document).ready( function () {
-      $('#table_id').DataTable();
-    } );
+      $('#table_id').DataTable({
+        "sDom":' <"search"f><"top"l>rt<"bottom"ip><"clear">',
+      });
+
+    });
 </script>
 
 <script type="text/javascript">

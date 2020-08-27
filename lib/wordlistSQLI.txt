@@ -1,0 +1,1 @@
+(union)|(asc)|(desc)|(as)|(limit)|(procedure)|(limit)|(distinct)|(having)|(replace)|(like)|(handler)|(bfilename)|(like)|(insert)|(update)|(delete)|(drop)|(truncate)|(order by)|(group by)|(hex)|(substr)|(or)

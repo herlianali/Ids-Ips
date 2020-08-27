@@ -2,8 +2,8 @@
 
 	function Ips($data)
 	{
-		
-		if (preg_match("/drop/", $data)) {
+		$merah   = file_get_contents(realpath(dirname(__FILE__))."/wordlistMerah.txt");
+		if (preg_match("/".$merah." /mi", $data)) {
 
 			$status    = "Blocked";
 			$kategory  = "Berbahaya";
@@ -55,8 +55,12 @@
 
 	function Ids($value)
 	{
-		// echo $value;
-		$injection = $value." ";
+		
+
+		$xss   = file_get_contents(realpath(dirname(__FILE__))."/wordlistXSS.txt");
+		$sqli  = file_get_contents(realpath(dirname(__FILE__))."/wordlistSQLI.txt");
+		$all   = file_get_contents(realpath(dirname(__FILE__))."/wordlistALL.txt");
+
 		$cek_ips   = Ips($value);
 		$urlJson   = realpath(dirname(__FILE__))."/data.json";
 
@@ -66,16 +70,16 @@
 		
 		if (!empty($value)) {
 
-			if (preg_match('/<html>/', $value)) {
+			if (preg_match('/'.$all.'/', $value)) {
 
 				$lokasi = basename($_SERVER['SCRIPT_NAME']);
 
 				$file 	  = file_get_contents($urlJson);
 				$arr_data = json_decode($file, true);
 
-				if (preg_match("/select/", $injection)) {
+				if (preg_match("/".$sqli."/", $value)) {
 					$jenis = "sql-injection";
-				}elseif (preg_match("/<html>/", $injection)) {
+				}elseif (preg_match("/".$xss."/", $value)) {
 					$jenis = "xss";
 				}
 
@@ -84,7 +88,7 @@
 				$arr_data [] = array(
 					'id'		 => ++$last_data_id,
 					'lokasi'	 => $lokasi,
-					'skrip'		 => $injection,
+					'skript'	 => $value,
 					'jenis' 	 => $jenis,
 					'ip_address' => $_SERVER['REMOTE_ADDR'],
 					'browser' 	 => browser(),
@@ -108,9 +112,4 @@
 		}
 
 	}
-
-	// var_dump(Ips("drop"));
-	// kurang e
-	// 1. mencocokkan dengan wordlist
-	// 2. pengisian lokasi atau file yang di inject
 ?>

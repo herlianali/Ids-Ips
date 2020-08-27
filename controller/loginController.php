@@ -38,15 +38,20 @@ class loginController extends Koneksi
 	{
 
 		$this->username = $username;
-		$this->password = $password;
+		$this->password = md5($password);
 
-		$query = mysqli_query($this->conn, "SELECT username, password FROM $this->TBadmin WHERE username = '$this->username' LIMIT 1");
+		$query = mysqli_query($this->conn, "SELECT username, password FROM $this->TBadmin WHERE username = '$this->username' && '$this->password' LIMIT 1");
 
 		if (mysqli_num_rows($query) > 0) {
-			$data = $query->fetch_array();
-			if ($data['password'] == md5($this->password)) {
-				return header('Location:monitoring.php');
-			}
+			// $data = $query->fetch_array();
+			// echo $data['password'];
+			// if ($data['password'] == md5($this->password)) {
+			return header('Location:dashboard.php');
+			// }else{
+			// }
+		}else{
+
+			// return header('Location:index.php');
 		}
 
 	}
