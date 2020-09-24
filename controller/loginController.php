@@ -1,6 +1,6 @@
 <?php 
 
-require_once($_SERVER['DOCUMENT_ROOT']."/percobaanSkripsi/percobaan5/model/Koneksi.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/Ids-Ips/model/Koneksi.php");
 
 class loginController extends Koneksi
 {
@@ -19,7 +19,6 @@ class loginController extends Koneksi
 	public function login($username, $password)
 	{
 		$this->username = $this->conn->real_escape_string($username);
-		// $this->password = md5(mysql_real_escape_string($password));
 		$this->password = $this->conn->real_escape_string($password);
 
 		$query = mysqli_query($this->conn, "SELECT username, password, nim FROM $this->TBuser WHERE username = '$this->username' LIMIT 1");

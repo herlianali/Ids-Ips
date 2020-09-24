@@ -1,3 +1,7 @@
+<?php
+$koneksi = mysqli_connect("localhost","herlian","aliyasa","skripsi");
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -44,7 +48,7 @@
           <!-- <a class="white-text email">nim anda adalah <b>161080200123</b></a> -->
         </div>
       </li>
-    	<li><a href="index.php">Monitoring Pengumpulan</a></li>
+    	<li><a href="not_found.php">Monitoring Pengumpulan</a></li>
       <?php
       // hidden if condition false
       if (false) {
@@ -53,6 +57,7 @@
       ?>
       <li><a href="not_found.php">Data Pengumpulan Praktikum</a></li>
     	<li><a href="not_found.php">Input Jadwal Praktikum</a></li>
+      <li><a href="mahasiswa.php">Data Mahasiswa</a></li>
     </ul>
 
 <main>

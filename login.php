@@ -1,8 +1,8 @@
 <?php
   require "lib/IpsFunc.php";
 
-  $ips = new IpsFunc;
-  $ips->cek($_SERVER['REMOTE_ADDR']);
+  // $ips = new IpsFunc;
+  // $ips->cek($_SERVER['REMOTE_ADDR']);
   
   session_start();
   if (!empty($_SESSION['nim'])) {

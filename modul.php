@@ -26,15 +26,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <!-- <tr>
             <td>Algoritma Pemrograman</td>
             <td>Aslab Informatika</td>
             <td><a href="#" class="waves-effect waves-light btn"><i class="material-icons">file_download</i></a></td>
-          </tr>
+          </tr> -->
         <?php 
 			if(isset($_POST['cari'])){
 				$cari = $_POST['cari'];
-				$data = mysqli_query($connect,"SELECT * FROM modul WHERE concat(`judul`,`upload_by`)like '%$cari%'");
+				$data = mysqli_query($connect,"SELECT * FROM modul WHERE CONCAT(`judul`,`oleh`) LIKE '%$cari%'");
 			}else{
 				$data = mysqli_query($connect,"SELECT * FROM modul");
 			}
@@ -45,7 +45,7 @@
         ?>
         <tr>
 			<td><?= $d['judul'] ?></td>
-			<td><?= $d['upload_by'] ?></td>
+			<td><?= $d['oleh'] ?></td>
 			<td><a href="#" class="waves-effect waves-light btn"><i class="material-icons">file_download</i></a></td>
         </tr>
         <?php } ?>
