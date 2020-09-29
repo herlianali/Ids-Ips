@@ -11,12 +11,17 @@
   require_once(realpath(dirname(__FILE__))."/controller/loginController.php");
   require_once(realpath(dirname(__FILE__))."/lib/monitor.php");
 
-  $login = new loginController;
+  if (isset($_POST['action'])) {
 
-  $username = Ids($_POST['username']);
-  $password = Ids($_POST['password']);
+    $login = new loginController;
 
-  $login->login($username, $password);
+    $username = Ids($_POST['username']);
+    $password = Ids($_POST['password']);
+
+    $login->login($username, $password);
+    
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

@@ -2,16 +2,20 @@
 include "./templates/header.php";
 include "controller/pengumpulanController.php";
 
-$nama      = Ids($_POST["nama"]);
-$nim       = Ids($_POST["nim"]);
-$kelas 	   = Ids($_POST["kelas"]);
-$praktikum = Ids($_POST["praktikum"]);
-$tanggal   = date("Y-m-d");
-$file      = "laporan.pdf";
+if (isset($_POST['button'])) {
+
+  $nama      = Ids($_POST["nama"]);
+  $nim       = Ids($_POST["nim"]);
+  $kelas 	   = Ids($_POST["kelas"]);
+  $praktikum = Ids($_POST["praktikum"]);
+  $tanggal   = date("Y-m-d");
+  $file      = "laporan.pdf";
+
+  $pengumpulan = new pengumpulan;
+  $pengumpulan->tambahData($nama, $nim, $kelas, $praktikum, $tanggal, $file);
+}
 
 
-$pengumpulan = new pengumpulan;
-$pengumpulan->tambahData($nama, $nim, $kelas, $praktikum, $tanggal, $file);
 
 ?>
 

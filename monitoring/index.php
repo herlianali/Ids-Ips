@@ -4,7 +4,10 @@
   require "../lib/monitor.php";
 
   $login = new loginController;
-  $login->loginAdmin(Ids($_POST['username']), Ids($_POST['password']));
+
+  if (isset($_POST['login'])) {
+    $login->loginAdmin(Ids($_POST['username']), Ids($_POST['password']));
+  }
 
 ?>
 
