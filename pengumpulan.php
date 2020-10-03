@@ -15,8 +15,6 @@ if (isset($_POST['button'])) {
   $pengumpulan->tambahData($nama, $nim, $kelas, $praktikum, $tanggal, $file);
 }
 
-
-
 ?>
 
 <div class="container">

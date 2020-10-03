@@ -1,6 +1,11 @@
 <?php 
 include "templates/header2.php"; 
 include "../model/Pengumpulan.php";
+require "../lib/IpsFunc.php";
+require "../lib/monitor.php";
+
+  // $ips = new IpsFunc;
+  // $ips->cek($_SERVER['REMOTE_ADDR']);
 
 $pengumpulan = new Pengumpulan;
 $data = $pengumpulan->getAll();
@@ -28,7 +33,7 @@ $data = $pengumpulan->getAll();
 			          	<?php
 			          	if(isset($_GET['nim']) ) {
 							// Get input
-							$nim = $_GET['nim'];
+							$nim = Ids($_GET['nim']);
 							// Check database
 							$query  = "SELECT nim, nama, kelas FROM user WHERE nim = '$nim'"; 
 							$result = mysqli_query($koneksi,$query) or die((is_object($koneksi)) ? mysqli_error($koneksi) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false));

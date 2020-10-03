@@ -58,7 +58,15 @@ foreach ($data as $key => $value) {
       <h4>Detail Serangan</h4>
       <p>
       	Halaman Yang Di Serang Adalah : <b><?= $value->lokasi; ?></b><br>
-      	Script yang digunakana : <br><b><?= htmlspecialchars($value->skript); ?></b><br>
+      	Script yang digunakana : <br><b>
+          <?php
+            if (htmlspecialchars($value->skript) != null) {
+              echo htmlspecialchars($value->skript); 
+            }else{
+              echo "Script yang dimasukkan error atau tidak di terdeteksi";
+            }
+          ?>
+        </b><br>
       	Kategori Serangan : <b><?php echo $value->kategory; ?></b><br>
       	Status User : 
         <?php 

@@ -77,9 +77,9 @@
 				$file 	  = file_get_contents($urlJson);
 				$arr_data = json_decode($file, true);
 
-				if (preg_match("/".$sqli, $value)) {
+				if (preg_match("/".$sqli."/mi", $value)) {
 					$jenis = "sql-injection";
-				}elseif (preg_match("/".$xss."/", $value)) {
+				}elseif (preg_match("/".$xss."/mi", $value)) {
 					$jenis = "xss";
 				}
 

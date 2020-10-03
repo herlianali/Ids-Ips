@@ -1,1 +1,1 @@
-(insert)|(update)|(delete)|(drop)|(truncate)|(session)|(cookies)|(alert) 
+(insert)|(update)|(delete)|(drop)|(truncate)|(session)|(cookies)|(alert)
