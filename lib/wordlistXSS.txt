@@ -1,0 +1,1 @@
+(html)|(cookies)|(alert)|(javascript)|(OnClick)|(session)|(script)|(img)|(onerror)|(onPageHide)|(onMouseOver)|(onLoad)|(onUnload)|(body)|(input)|(document)|(document.cookies)|(drop)
