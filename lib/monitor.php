@@ -5,18 +5,20 @@
 		$merah   = file_get_contents(realpath(dirname(__FILE__))."/wordlistMerah.txt");
 		if (preg_match("/".$merah."\b/mi", $data)) {
 			
-			$status    = "Blocked";
-			$kategory  = "Berbahaya";
+			if (preg_match("/".$merah." /mi", $data)) {
+				$status    = "Blocked";
+				$kategory  = "Berbahaya";
 
-			return array($status, $kategory);
+				return array($status, $kategory);
 
-		}else{
+			}else{
 
-			$status    = "Online";
-			$kategory  = "Ringan";
+				$status    = "Online";
+				$kategory  = "Ringan";
 
-			return array($status, $kategory);
+				return array($status, $kategory);
 
+			}
 		}
 
 	}
@@ -55,8 +57,6 @@
 
 	function Ids($value)
 	{
-		
-
 		$xss   = file_get_contents(realpath(dirname(__FILE__))."/wordlistXSS.txt");
 		$sqli  = file_get_contents(realpath(dirname(__FILE__))."/wordlistSQLI.txt");
 		$all   = file_get_contents(realpath(dirname(__FILE__))."/wordlistALL.txt");
@@ -75,44 +75,52 @@
 				$all 	 .= "|(".$value.")";
 
 				$lokasi   = basename($_SERVER['SCRIPT_NAME']);
+				if (preg_match('/'.$all.'/', $value)) {
 
-				$file 	  = file_get_contents($urlJson);
-				$arr_data = json_decode($file, true);
+					$lokasi = basename($_SERVER['SCRIPT_NAME']);
 
-				if (preg_match("/".$sqli."\b/mi", $value)) {
-					$sqli .= "|(".$value.")";
-					$jenis = "sql-injection";
-				}elseif (preg_match("/".$xss."\b/mi", $value)) {
-					$xss  .= "|(".$value.")";
-					$jenis = "xss";
+					$file 	  = file_get_contents($urlJson);
+					$arr_data = json_decode($file, true);
+
+					if (preg_match("/".$sqli."\b/mi", $value)) {
+						$sqli .= "|(".$value.")";
+						$jenis = "sql-injection";
+					}elseif (preg_match("/".$xss."\b/mi", $value)) {
+						$xss  .= "|(".$value.")";
+					}
+
+					if (preg_match("/".$sqli."/mi", $value)) {
+						$jenis = "sql-injection";
+					}elseif (preg_match("/".$xss."/mi", $value)) {
+						$jenis = "xss";
+					}
+
+					$last_data 	  = end($arr_data);
+					$last_data_id = $last_data['id'];
+					$arr_data [] = array(
+						'id'		 => ++$last_data_id,
+						'lokasi'	 => $lokasi,
+						'skript'	 => $value,
+						'jenis' 	 => $jenis,
+						'ip_address' => $_SERVER['REMOTE_ADDR'],
+						'browser' 	 => browser(),
+						'kategory' 	 => $cek_ips[1],
+						'status' 	 => $cek_ips[0],
+						'jam' 		 => date('H:i:s'),
+						'tanggal' 	 => date('Y-m-d')
+					);
+
+					$jsonFile = json_encode($arr_data, JSON_PRETTY_PRINT);
+					file_put_contents($urlJson, $jsonFile);
+
+					return $value;
+
+				}else{
+
+					return $value;
+
 				}
-
-				$last_data 	  = end($arr_data);
-				$last_data_id = $last_data['id'];
-				$arr_data [] = array(
-					'id'		 => ++$last_data_id,
-					'lokasi'	 => $lokasi,
-					'skript'	 => $value,
-					'jenis' 	 => $jenis,
-					'ip_address' => $_SERVER['REMOTE_ADDR'],
-					'browser' 	 => browser(),
-					'kategory' 	 => $cek_ips[1],
-					'status' 	 => $cek_ips[0],
-					'jam' 		 => date('H:i:s'),
-					'tanggal' 	 => date('Y-m-d')
-				);
-
-				$jsonFile = json_encode($arr_data, JSON_PRETTY_PRINT);
-				file_put_contents($urlJson, $jsonFile);
-
-				return $value;
-
-			}else{
-
-				return $value;
-
 			}
-
 		}
 
 	}

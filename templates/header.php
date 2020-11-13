@@ -3,7 +3,10 @@
 
 // $ips = new IpsFunc;
 // $ips->cek($_SERVER['REMOTE_ADDR']);
+// require "lib/IpsFunc.php";
 
+// $ips = new IpsFunc;
+// $ips->cek($_SERVER['REMOTE_ADDR']);
 require "lib/monitor.php";
 
 session_start();

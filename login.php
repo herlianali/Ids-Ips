@@ -1,5 +1,6 @@
 <?php
   // require "lib/IpsFunc.php";
+  // require "lib/IpsFunc.php";
 
   // $ips = new IpsFunc;
   // $ips->cek($_SERVER['REMOTE_ADDR']);
